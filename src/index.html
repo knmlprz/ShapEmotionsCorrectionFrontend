@@ -3,15 +3,19 @@
  
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Sentiment demo</title>
     <link href="./index.css" rel="stylesheet">
 </head>
  
 <body>
     <div class="s m-auto max-w-md  my-2">
         <h2>Type something...</h2>
-        <textarea id="data" class="resize rounded-md border-2 w-full"></textarea>
-        <span>and see how the color of the text changes..</span>
+        <textarea id="data" class="p-3 resize rounded-md border-2 w-full"></textarea>
+        <span>and see how the color of the text changes. Click the button below to explain predictions.</span>
+        <button class="bg-blue-500 hover:bg-blue-700 text-white rounded m-auto block my-3 font-bold py-2 px-4">Explain</button>
+        <div class="rounded-md border-2 w-full min-h-fit p-3">
+            <span>The predictions will appear here..</span>
+        </div>
     </div>
 
     <script type="module" src="scripts/textarea-colors.js"></script>
