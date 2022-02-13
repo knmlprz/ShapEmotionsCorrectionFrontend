@@ -1,5 +1,13 @@
 # Frontend for Shap Emotions Correction
 
+This demo detects sentiment (positive/neutral/negative)
+
+![](docs/gifs/Emotions.gif)
+
+the predictions update as you type
+
+![](docs/gifs/Hello.gif)
+
 ## How to run
 1. Run sentiment API:
 ``` commandline
