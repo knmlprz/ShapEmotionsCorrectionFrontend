@@ -9,17 +9,21 @@ the predictions update as you type
 ![](docs/gifs/Hello.gif)
 
 ## How to run
+
 1. Run sentiment API:
-``` commandline
+
+```commandline
 docker run -p 8000:8000 finloop/shap-emotions-correction-api:latest
 ```
+
 1. Intall npm dependencies:
-``` commandline
+
+```commandline
 npm install
 ```
 
 3. Run server:
 
-``` commandline
+```commandline
 npx parcel src/index.html
 ```
