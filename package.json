@@ -1,11 +1,11 @@
 {
   "dependencies": {
-    "javascript-color-gradient": "^2.3.3"
+    "javascript-color-gradient": "^2.3.3",
+    "tailwindcss": "^3.0.22"
   },
   "devDependencies": {
     "autoprefixer": "^10.4.2",
     "parcel": "^2.3.1",
-    "postcss": "^8.4.6",
-    "tailwindcss": "^3.0.22"
+    "postcss": "^8.4.6"
   }
 }
