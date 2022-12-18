@@ -5,7 +5,7 @@ function readSentiment() {
   let text = document.getElementById("data").value;
   console.log("Predicting sentiment");
   post(
-    "http://localhost:8000/sentiment",
+    window.location.protocol + "//" + window.location.host + "/sentiment",
     (data = {
       value: text,
     })
