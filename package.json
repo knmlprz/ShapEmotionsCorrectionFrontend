@@ -1,6 +1,5 @@
 {
   "dependencies": {
-    "javascript-color-gradient": "^2.3.3",
     "tailwindcss": "^3.0.22"
   },
   "devDependencies": {

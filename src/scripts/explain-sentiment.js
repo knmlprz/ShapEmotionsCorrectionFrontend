@@ -1,22 +1,31 @@
 "use strict";
-import colorGradient from "javascript-color-gradient";
 import { post } from "./utils.js";
 
 // Create gradient array
-const gradientArray = colorGradient
-  .setGradient("#4F94FF", "#ffffff", "FF512C")
-  .setMidpoint(11)
-  .getArray();
+const gradientArray = [
+  "#5e9dff",
+  "#84b3ff",
+  "#a1c6ff",
+  "#bfd9ff",
+  "#e5efff",
+  "#ffffff",
+  "#ffded7",
+  "#ffc0b2",
+  "#ff9c86",
+  "#ff7d62",
+  "#ff603e",
+];
+
 console.log(gradientArray);
 
-// Get input element
-let input = document.querySelector("#explain");
+// Get btn element
+let btn = document.querySelector("#explain");
 
 async function explainSentiment() {
   let text = document.getElementById("data").value;
   console.log(text);
   post(
-    "http://localhost:8000/sentiment",
+    window.location.protocol + "//" + window.location.host + "/sentiment",
     (data = {
       value: text,
     })
@@ -38,7 +47,10 @@ function map_to_10s(number = 0.0) {
 async function writePredictions(text = "", label = "") {
   // Get data from server
   const response = await post(
-    "http://localhost:8000/sentiment/explain",
+    window.location.protocol +
+      "//" +
+      window.location.host +
+      "/sentiment/explain",
     (data = { value: text })
   );
   console.log(response);
@@ -61,11 +73,11 @@ async function writePredictions(text = "", label = "") {
   });
 
   // Let user click element
-  input.removeAttribute("disabled");
+  btn.removeAttribute("disabled");
 }
 
-input.addEventListener("click", function (e) {
-  input.setAttribute("disabled", "true");
+btn.addEventListener("click", function (e) {
+  btn.setAttribute("disabled", "true");
   // Explain sentiment
   explainSentiment();
 });
